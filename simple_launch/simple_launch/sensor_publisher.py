@@ -8,6 +8,7 @@ class SensorPublisher(Node):
         super().__init__("sensor_publisher")
         self.sensor_pub_ = self.create_publisher(String, "data_publisher", 10)
         self.sensor_timer =   self.create_timer(1.0, self.sensor_timer_callback)
+        self.get_logger().info("Sensor publisher is publishing string data....")
 
     def sensor_timer_callback(self):
         msg = String()

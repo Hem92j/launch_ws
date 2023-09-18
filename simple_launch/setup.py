@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "sensor_data_pub = simple_launch.sensor_publisher:main"
+            "sensor_data_pub = simple_launch.sensor_publisher:main",
+            "robot_listener = simple_launch.robot_listener:main"
         ],
     },
 )
